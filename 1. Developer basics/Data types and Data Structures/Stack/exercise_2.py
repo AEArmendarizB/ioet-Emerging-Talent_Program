@@ -32,4 +32,3 @@ expression = input("Ingrese la expresion posfija a ser evaluada: ")
 print("EL valor es: " f"{evaluate_postfix_expresion(expression)}")
 
 
-#Mejorar para calcular y determinar cadenas con 2 o mas digitos

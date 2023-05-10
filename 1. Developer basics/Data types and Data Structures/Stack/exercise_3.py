@@ -4,8 +4,8 @@
 
 #Define the function for inverted a expression
 def inverted_expression(expression: str) -> str:
-    inverted = []
-    new_expression = ""
+    inverted:str = []
+    new_expression:str = ""
     for character in expression:
         inverted.append(character)
     
@@ -16,6 +16,6 @@ def inverted_expression(expression: str) -> str:
     return new_expression
 
 #Request the expression
-expression = input("Ingrese una cadena de texto: ")
+expression:str = input("Ingrese una cadena de texto: ")
 print("La cadena invertida es: ")
 print(f"{inverted_expression(expression)}")
