@@ -21,15 +21,15 @@ students_average = {
     "student_5":0
 }
 
-num_aux_student = 1     #Define an auxilar for first FOR 
-num_aux_grade = 1       #Define an auxilar for second FOR 
-class_average = 0       #Define a variable for class average
+num_aux_student: int = 1     #Define an auxilar for first FOR 
+num_aux_grade: float = 1       #Define an auxilar for second FOR 
+class_average: float = 0       #Define a variable for class average
 
 #Register all the grades for all the students
 for number_student in students:
     print("Ingrese las notas del estudiante " f"{num_aux_student} ")
     for number_grade in students[number_student]:
-        grade = input("Nota " f"{num_aux_grade} :")
+        grade: float = input("Nota " f"{num_aux_grade} :")
         grade = float(grade)
         students[number_student][number_grade] = grade
         num_aux_grade=num_aux_grade+1

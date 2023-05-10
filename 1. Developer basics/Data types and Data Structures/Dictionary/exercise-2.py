@@ -17,11 +17,11 @@ relations = {
 }
 
 #Request information to the client
-input = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
-input = input.split()
-value = float(input[0])
-measure=input[1]
-position = 0
+input: str = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
+input: str = input.split()
+value: float = float(input[0])
+measure: str =input[1]
+position: int = 0
 #Check the measure exist in the dictionary
 if measure not in relations:
     print("La unidad de medida ingresada no se acepta")
@@ -29,6 +29,6 @@ else:
 #If the measure exist do the conversions with all the respective dictionary
     print("Las conversiones posibles para son: ")
     for measure_output in relations[measure]:
-        salida = value*relations[measure][measure_output]
+        salida: float = value*relations[measure][measure_output]
         position=position+1
         print(f"{position} - {salida} {measure_output}")
