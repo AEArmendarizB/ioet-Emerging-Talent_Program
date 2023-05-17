@@ -28,7 +28,7 @@ def count_words(words: str):
 def show_results(frecuency: dict): 
     result = []
     for word in frecuency:
-        print((word,frecuency[word]))
+        print(word,frecuency[word])
         result.append((word,frecuency[word]))       #used for TDD
     return result
 
