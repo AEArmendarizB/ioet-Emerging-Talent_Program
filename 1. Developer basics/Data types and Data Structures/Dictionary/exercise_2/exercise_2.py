@@ -1,5 +1,12 @@
 
 
+#convert the value
+def value_conversion(relation:dict, value:float, measure:str):
+    output = []
+    for measure_output in relation:
+        output.append(value*relation[measure][measure_output]) 
+        print(f" - {output} {measure_output}")
+    return output
 
 #Check the original measure exist in the dictionary
 def check_measure(relation:dict,measure:str)->bool:
