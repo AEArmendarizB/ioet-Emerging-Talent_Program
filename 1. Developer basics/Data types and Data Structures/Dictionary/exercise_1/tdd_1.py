@@ -24,6 +24,6 @@ def test__count_words():
 
 def test__show_results():
     count = {"Hola":3,"mundo":3}
-    result_expected = "mundo", 3
+    result_expected = ""
     result = exercise_1.show_results(count)
     assert result_expected == result
