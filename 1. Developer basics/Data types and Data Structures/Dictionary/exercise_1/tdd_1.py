@@ -12,7 +12,7 @@ def test__read_text_file():
 
 def test__split_in_words():
     string = "Hola mundo"
-    split_expected = ""
+    split_expected = ["Hola","mundo"]
     split = exercise_1.split_in_words(string)
     assert split_expected == split
 
