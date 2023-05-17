@@ -28,7 +28,8 @@ def count_words(words: str):
 def show_results(frecuency: dict): 
     result = []
     for word in frecuency:
-        result.append((word,frecuency[word]))
+        print((word,frecuency[word]))
+        result.append((word,frecuency[word]))       #used for TDD
     return result
 
 
@@ -36,5 +37,5 @@ print("Las palabras y sus frecuencias son: ")
 text:str = read_file(path)
 words:str = split_in_words(text)
 frecuency = count_words(words)
-##print(show_results(frecuency))
+show_results(frecuency)
 
