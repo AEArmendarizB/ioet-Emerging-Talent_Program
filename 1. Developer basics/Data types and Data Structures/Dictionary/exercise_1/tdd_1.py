@@ -16,3 +16,8 @@ def test__split_in_words():
     split = exercise_1.split_in_words(string)
     assert split_expected == split
 
+def test__count_words():
+    split = ["Hola","mundo","Hola","mundo","Hola","mundo"]
+    count_expected:dict = ""
+    count = exercise_1.count_words(split)
+    assert count_expected == count
