@@ -21,3 +21,9 @@ def test__count_words():
     count_expected:dict = {"Hola":3,"mundo":3}
     count = exercise_1.count_words(split)
     assert count_expected == count
+
+def test__show_results():
+    count = {"Hola":3,"mundo":3}
+    result_expected = ""
+    result = exercise_1.show_results(count)
+    assert result_expected == result

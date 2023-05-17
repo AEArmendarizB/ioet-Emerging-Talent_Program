@@ -27,11 +27,13 @@ def count_words(words: str):
 #Show the results
 def show_results(frecuency: dict):
     for word in frecuency:
-        print(word,frecuency[word])
+        result:str =(word,frecuency[word])
+    return result
+
 
 print("Las palabras y sus frecuencias son: ")
 text:str = read_file(path)
 words:str = split_in_words(text)
 frecuency = count_words(words)
-show_results(frecuency)
+print(show_results(frecuency))
 
