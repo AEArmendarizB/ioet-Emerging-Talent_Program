@@ -1,8 +1,16 @@
-#EJERCICIO DE CONVERSION DE UNIDADES:
-#Escribe un programa que convierta una cantidad en una unidad de medida a otra unidad de medida 
-#utilizando un diccionario para almacenar las relaciones de conversión.
 
 
+
+#Check the original measure exist in the dictionary
+def check_measure(relation:dict,measure:str)->bool:
+    if measure not in relation:
+        return False
+    
+
+#Evaluate boolean
+def evaluate_boolean(boolean:bool):
+    if boolean == False:
+        print("La unidad de medida ingresada no se acepta")
 
 #Define dictionary
 relations = {
@@ -16,19 +24,17 @@ relations = {
     "in":{"km":0.0000254, "hm":0.000254, "m":0.0254, "dm":0.254, "cm":2.54, "mm":25.4, "ft":0.0833333},
 }
 
-#Request information to the client
+#Request information to the client about the original value and measure
 input: str = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
 input: str = input.split()
 value: float = float(input[0])
 measure: str =input[1]
-position: int = 0
+
+axuiliar = check_measure(relations, measure)
 #Check the measure exist in the dictionary
 if measure not in relations:
     print("La unidad de medida ingresada no se acepta")
 else:
 #If the measure exist do the conversions with all the respective dictionary
-    print("Las conversiones posibles para son: ")
-    for measure_output in relations[measure]:
-        salida: float = value*relations[measure][measure_output]
-        position=position+1
-        print(f"{position} - {salida} {measure_output}")
+    print("Las conversiones posibles son: ")
+    value_conversion(relations,value,measure)
