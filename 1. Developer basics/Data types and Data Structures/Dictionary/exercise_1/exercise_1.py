@@ -24,19 +24,14 @@ def count_words(words: str):
             frecuency[word] += 1
     return frecuency
 
-#Show the results
+
+if __name__ == "__main__":
+    print("Las palabras y sus frecuencias son: ")
+    text:str = read_file(path)
+    words:str = split_in_words(text)
+    frecuency = count_words(words)
+
+    #Show the results
     for word in frecuency:
         print(word,frecuency[word])
-        result.append((word,frecuency[word]))       #used for TDD
-
-
-
-print("Las palabras y sus frecuencias son: ")
-text:str = read_file(path)
-words:str = split_in_words(text)
-frecuency = count_words(words)
-
-#Show the results
-for word in frecuency:
-     print(word,frecuency[word])
 
