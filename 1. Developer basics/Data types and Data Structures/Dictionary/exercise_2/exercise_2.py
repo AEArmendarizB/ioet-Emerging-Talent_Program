@@ -8,10 +8,7 @@ def value_conversion(relation: dict, value: float, measure: str):
         print(f" - {output[-1]} {measure_output}")
     return output
 
-#Check the original measure exist in the dictionary
-def check_measure(relation:dict,measure:str)->bool:
-    if measure not in relation:
-        return False
+
     
 
 #Evaluate boolean
