@@ -12,7 +12,8 @@ def value_conversion(relation: dict, value: float, measure: str):
 def check_measure(relation:dict,measure:str)->bool:
     if measure not in relation:
         return False
-    
+    else: 
+        return True
 
 #Evaluate boolean
 def evaluate_boolean(boolean:bool):
