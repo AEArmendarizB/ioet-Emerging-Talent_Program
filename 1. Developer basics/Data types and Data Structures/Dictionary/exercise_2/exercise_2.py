@@ -15,11 +15,6 @@ def check_measure(relation:dict,measure:str)->bool:
     else: 
         return True
 
-#Evaluate boolean
-def evaluate_boolean(boolean:bool):
-    if boolean == False:
-        print("La unidad de medida ingresada no se acepta")
-
 #Define dictionary
 relations = {
     "km":{"hm":100, "m":1000, "dm":10000, "cm":100000, "mm":1000000, "ft":3280.84, "in":39370.1},
@@ -33,16 +28,15 @@ relations = {
 }
 
 #Request information to the client about the original value and measure
-#input: str = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
-#input: str = input.split()
-#value: float = float(input[0])
-#measure: str =input[1]
+input: str = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
+input: str = input.split()
+value: float = float(input[0])
+measure: str =input[1]
 
-#axuiliar = check_measure(relations, measure)
-#Check the measure exist in the dictionary
-#if measure not in relations:
-#    print("La unidad de medida ingresada no se acepta")
-#else:
-#If the measure exist do the conversions with all the respective dictionary
-#    print("Las conversiones posibles son: ")
-#    value_conversion(relations,value,measure)
+
+check = check_measure(relations, measure)
+if check == False:
+    print("La unidad de medida ingresada no se acepta")
+else:
+    print("Las conversiones posibles son: ")
+    value_conversion(relations,value,measure)

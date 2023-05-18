@@ -18,3 +18,4 @@ def test__check_measure__return_a_bool__when_inputs_are_dictionary_and_measure()
     boolean_expected = True
     boolean = exercise_2.check_measure(dictionary,measure)
     assert boolean_expected == boolean
+
