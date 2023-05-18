@@ -1,11 +1,11 @@
 
 
 #convert the value
-def value_conversion(relation:dict, value:float, measure:str):
+def value_conversion(relation: dict, value: float, measure: str):
     output = []
-    for measure_output in relation:
-        output.append(value*relation[measure][measure_output]) 
-        print(f" - {output} {measure_output}")
+    for measure_output in relation[measure]:
+        output.append(value * relation[measure][measure_output])
+        print(f" - {output[-1]} {measure_output}")
     return output
 
 #Check the original measure exist in the dictionary
@@ -32,16 +32,16 @@ relations = {
 }
 
 #Request information to the client about the original value and measure
-input: str = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
-input: str = input.split()
-value: float = float(input[0])
-measure: str =input[1]
+#input: str = input("Ingrese el valor y la unidad de medida separada por un espacio: ")
+#input: str = input.split()
+#value: float = float(input[0])
+#measure: str =input[1]
 
-axuiliar = check_measure(relations, measure)
+#axuiliar = check_measure(relations, measure)
 #Check the measure exist in the dictionary
-if measure not in relations:
-    print("La unidad de medida ingresada no se acepta")
-else:
+#if measure not in relations:
+#    print("La unidad de medida ingresada no se acepta")
+#else:
 #If the measure exist do the conversions with all the respective dictionary
-    print("Las conversiones posibles son: ")
-    value_conversion(relations,value,measure)
+#    print("Las conversiones posibles son: ")
+#    value_conversion(relations,value,measure)
