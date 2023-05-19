@@ -1,25 +1,3 @@
-#EJERCICIO DE REGISTRO DE NOTAS:
-#Escribe un programa que permita registrar las notas de varios estudiantes y luego calcule el promedio de notas de cada estudiante 
-#y el promedio general de la clase utilizando un diccionario para almacenar los datos.
-
-
-#Define dictionary for grades
-students = {
-    "student_1":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
-    "student_2":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
-    "student_3":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
-    "student_4":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
-    "student_5":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0}
-}
-
-#Define directory for averages
-students_average = {
-    "student_1":0,
-    "student_2":0,
-    "student_3":0,
-    "student_4":0,
-    "student_5":0
-}
 
 num_aux_student: int = 1     #Define an auxilar for first FOR 
 num_aux_grade: float = 1       #Define an auxilar for second FOR 
@@ -47,3 +25,25 @@ print("Los promedios de los estudiantes son: ")
 for number_student in students_average:
     print(f"{number_student}" "= " f"{students_average[number_student]}")
 print("El promedio general de la clase es: " f"{class_average}")
+
+
+if __name__ == '__name__':
+    #Define dictionary for grades
+    students = {
+        "student_1":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
+        "student_2":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
+        "student_3":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
+        "student_4":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0},
+        "student_5":{"grade_1":0, "grade_2":0, "grade_3":0, "grade_4":0, "grade_5":0}
+    }
+
+    #Define directory for averages
+    students_average = {
+        "student_1":0,
+        "student_2":0,
+        "student_3":0,
+        "student_4":0,
+        "student_5":0
+    }
+    for number_student in students:
+        print("Ingrese las notas del estudiante " f"{num_aux_student} ")
