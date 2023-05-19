@@ -49,7 +49,7 @@ if __name__ == '__main__':
     }
     
     students:dict = save_grades_all_students(students)
-    students_average, average:float = calculated_students_average(students_average, students)
+    students_average,average = calculated_students_average(students_average, students)
 
   #Show results
     print("Los promedios de los estudiantes son: ")
