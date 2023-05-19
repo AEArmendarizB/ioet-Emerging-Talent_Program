@@ -12,16 +12,14 @@ def save_grades(students:dict, student)->dict:
         num +=1
     return students
 
-
-# for number_student in students:
-#     print("Ingrese las notas del estudiante " f"{num_aux_student} ")
-#     for number_grade in students[number_student]:
-#         grade: float = input("Nota " f"{num_aux_grade} :")
-#         grade = float(grade)
-#         students[number_student][number_grade] = grade
-#         num_aux_grade=num_aux_grade+1
-#     num_aux_student=num_aux_student+1
-#     num_aux_grade = 1
+#register grades for all the students
+def save_grades_all_students(students: dict)->dict:
+    num=1
+    for number_student in students:
+        print("Ingrese las notas del estudiante " f"{num} ")
+        save_grades(students, number_student)
+        num+=1
+    return students
 
 # #Calculate the average for each student and the class average
 # for number_student in students_average:
