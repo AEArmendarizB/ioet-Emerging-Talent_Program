@@ -29,6 +29,6 @@ def test__students_average__return_tuple__when_input_is_dictionary_of_students()
                 "student_4":{"grade_1":'10',"grade_2":'9',"grade_3":'9',"grade_4":'8',"grade_5":'8'},
                 "student_5":{"grade_1":'10',"grade_2":'9',"grade_3":'9',"grade_4":'8',"grade_5":'8'}}
     students_average = {"student_1":0, "student_2":0,"student_3":0,"student_4":0,"student_5":0}
-    dictionary_exepcted = ({'student_1':9.2, 'student_2':8.8, 'student_3':8.8, 'student_4':8.8, 'student_5':8.8},8.88)
+    dictionary_exepcted = ({'student_1':9.2, 'student_2':8.8, 'student_3':8.8, 'student_4':8.8, 'student_5':8.8},8.88 )
     dictionary = exercise_3.calculated_students_average(students_average, students)
     assert dictionary_exepcted == dictionary
