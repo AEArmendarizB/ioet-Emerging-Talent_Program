@@ -24,7 +24,7 @@ def save_grades_all_students(students: dict)->dict:
 def students_average(students_average: dict, students:dict)->dict:
     class_average:float = 0 
     for number_student in students_average:
-        students_average[number_student] = (students['grade_1']+students['grade_2']+students['grade_3']+students['grade_4']+students['grade_5'])
+        students_average[number_student] = (students[number_student]['grade_1']+students[number_student]['grade_2']+students[number_student]['grade_3']+students[number_student]['grade_4']+students[number_student]['grade_5'])
         class_average += students_average[number_student]
     class_average = class_average/2
     return (students_average, class_average)
