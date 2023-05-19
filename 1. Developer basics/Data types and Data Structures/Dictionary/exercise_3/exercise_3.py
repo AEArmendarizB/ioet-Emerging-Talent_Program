@@ -4,7 +4,7 @@ num_aux_grade: float = 1       #Define an auxilar for second FOR
 class_average: float = 0       #Define a variable for class average
 
 #Register all the grades for one student
-def add_grades(students:dict, student)->dict:
+def save_grades(students:dict, student)->dict:
     num = 1
     for num_grade in students[student]:
         grade:float = input("Nota "f"{num}: ")
