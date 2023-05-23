@@ -4,6 +4,13 @@
 # #seguimiento de los paréntesis abiertos y cierra el último paréntesis abierto si se encuentra un paréntesis cerrado.
 
 
+def add_character(parentheses: str):
+    grouping_signs: str = []
+    for character in parentheses:
+        if character in ['(','[','{']:
+            grouping_signs.append(character)
+        else:
+            return grouping_signs
     
 # #Function por balanced parentheses
 # def balanced_grouping_signs(string:str):
