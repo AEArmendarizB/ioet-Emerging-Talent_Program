@@ -27,5 +27,7 @@ if __name__ == "__main__":
         grouping_signs, balanced = delete_character(character, grouping_signs)
         if balanced == False:
             print("La expresion no esta balanceada")
-    if len(grouping_signs) == 0 and balanced == True:
+    if len(grouping_signs) == 0 and balanced != False:
         print("La expresion esta balanceada")
+    elif balanced != False: 
+        print("La expresion no esta balanceada")
