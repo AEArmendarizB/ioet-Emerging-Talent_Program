@@ -1,4 +1,10 @@
 
+
+def is_a_digit(operands:str, character:str)->str:
+    if character.isdigit():
+        number = int(character)
+        operands.append(number)
+    return operands
 # #Define a function
 # def evaluate_postfix_expresion(expression: str) ->str:
 #     operands = []
