@@ -4,14 +4,28 @@
 # #seguimiento de los paréntesis abiertos y cierra el último paréntesis abierto si se encuentra un paréntesis cerrado.
 
 
-def add_character(parentheses: str):
+def add_character(parentheses: str, grouping_signs:str)->str:
     grouping_signs: str = []
     for character in parentheses:
         if character in ['(','[','{']:
             grouping_signs.append(character)
         else:
             return grouping_signs
-    
+
+def delete_character(parentheses: str, grouping_signs: str)->str:
+    for character in parentheses:
+        if character in [')',']','}']:
+            if not grouping_signs:
+                return "La expresion no esta balanceada"
+            sign:str =grouping_signs.pop()
+            if character == ')' and sign != '(':
+                return "La expresion no esta balanceada"
+            if character == ']' and sign != '[':
+                return "La expresion no esta balanceada"
+            if character == '}' and sign != '{':
+                return "La expresion no esta balanceada"
+            
+
 # #Function por balanced parentheses
 # def balanced_grouping_signs(string:str):
    
