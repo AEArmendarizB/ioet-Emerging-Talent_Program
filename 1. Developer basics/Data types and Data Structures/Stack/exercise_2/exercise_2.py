@@ -20,6 +20,13 @@ def evaluate_postfix(operands:str,character:str)->str:
             operands.append(operand_1/operand_2)
     return operands
 
+if __name__ == "__main__": 
+    expression = input("Ingrese la expresion posfija a ser evaluada: ")
+    operands = []
+    for character in expression: 
+        operands = is_a_digit(operands,character)
+        operands = evaluate_postfix (operands,character)
+    print ("El valor es: "f"{operands.pop()}")
 # #Define a function
 # def evaluate_postfix_expresion(expression: str) ->str:
 #     operands = []
