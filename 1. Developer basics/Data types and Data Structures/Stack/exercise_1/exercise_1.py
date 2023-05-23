@@ -4,27 +4,23 @@
 # #seguimiento de los paréntesis abiertos y cierra el último paréntesis abierto si se encuentra un paréntesis cerrado.
 
 
-def add_character(parentheses: str, grouping_signs:str)->str:
-    grouping_signs: str = []
-    for character in parentheses:
-        if character in ['(','[','{']:
-            grouping_signs.append(character)
-        else:
-            return grouping_signs
+def add_character(character: str, grouping_signs:str)->str:
+    if character in ['(','[','{']:
+        grouping_signs.append(character)
+    return grouping_signs
 
-def delete_character(parentheses: str, grouping_signs: str)->str:
-    for character in parentheses:
-        if character in [')',']','}']:
-            if not grouping_signs:
-                return "La expresion no esta balanceada"
-            sign:str =grouping_signs.pop()
-            if character == ')' and sign != '(':
-                return "La expresion no esta balanceada"
-            if character == ']' and sign != '[':
-                return "La expresion no esta balanceada"
-            if character == '}' and sign != '{':
-                return "La expresion no esta balanceada"
-    return grouping_signs    
+def delete_character(character: str, grouping_signs: str)->str:
+    if character in [')',']','}']:
+        if not grouping_signs:
+            print( "La expresion no esta balanceada")
+        sign:str =grouping_signs.pop()
+        if character == ')' and sign != '(':
+            print( "La expresion no esta balanceada")
+        if character == ']' and sign != '[':
+            print( "La expresion no esta balanceada")
+        if character == '}' and sign != '{':
+            print( "La expresion no esta balanceada")
+    return grouping_signs      
             
 # #Function por balanced parentheses
 # def balanced_grouping_signs(string:str):
@@ -55,7 +51,14 @@ def delete_character(parentheses: str, grouping_signs: str)->str:
 #     else: 
 #         return print("La expresion no esta balanceada")
             
-# if __name__ == "__main__":
-#     #Request a string
-#     input_string: str = input("Ingrese la cadena a ser verificada: ")
-#     balanced_grouping_signs(input_string)
+if __name__ == "__main__":
+    #Request a string
+    input_string: str = input("Ingrese la cadena a ser verificada: ")
+    grouping_signs:str = []
+    for character in input_string:
+        grouping_signs = add_character(character, grouping_signs)
+        grouping_signs = delete_character(character, grouping_signs)
+    if len(grouping_signs) == 0:
+        print("La expresion esta balanceada")
+    else: 
+        print("La expresion no esta balanceada")
