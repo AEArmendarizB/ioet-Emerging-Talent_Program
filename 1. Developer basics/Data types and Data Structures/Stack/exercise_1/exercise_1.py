@@ -4,18 +4,19 @@ def add_character(character: str, grouping_signs:str)->str:
         grouping_signs.append(character)
     return grouping_signs
 
-def delete_character(character: str, grouping_signs: str)->str:
+def delete_character(character: str, grouping_signs: str)->tuple:
+    balanced:bool = True
     if character in [')',']','}']:
         if not grouping_signs:
-            print( "La expresion no esta balanceada")
+            balanced = False
         sign:str =grouping_signs.pop()
         if character == ')' and sign != '(':
-            print( "La expresion no esta balanceada")
+            balanced = False
         if character == ']' and sign != '[':
-            print( "La expresion no esta balanceada")
+            balanced = False
         if character == '}' and sign != '{':
-            print( "La expresion no esta balanceada")
-    return grouping_signs      
+            balanced = False
+    return grouping_signs, balanced      
             
 if __name__ == "__main__":
     #Request a string
@@ -23,8 +24,8 @@ if __name__ == "__main__":
     grouping_signs:str = []
     for character in input_string:
         grouping_signs = add_character(character, grouping_signs)
-        grouping_signs = delete_character(character, grouping_signs)
-    if len(grouping_signs) == 0:
+        grouping_signs, balanced = delete_character(character, grouping_signs)
+        if balanced == False:
+            print("La expresion no esta balanceada")
+    if len(grouping_signs) == 0 and balanced == True:
         print("La expresion esta balanceada")
-    else: 
-        print("La expresion no esta balanceada")
