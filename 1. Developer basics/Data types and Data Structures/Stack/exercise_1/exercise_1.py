@@ -24,8 +24,8 @@ def delete_character(parentheses: str, grouping_signs: str)->str:
                 return "La expresion no esta balanceada"
             if character == '}' and sign != '{':
                 return "La expresion no esta balanceada"
+        return "La expresion esta balanceada"    
             
-
 # #Function por balanced parentheses
 # def balanced_grouping_signs(string:str):
    
