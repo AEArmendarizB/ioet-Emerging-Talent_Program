@@ -1,10 +1,16 @@
 
 def reverted_expression(expression: str)->list:
-    expression_inverted:str = []
+    expression_stack:str = []
     for character in expression:
-        expression_inverted.append(character)
-    return expression_inverted
+        expression_stack.append(character)
+    return expression_stack
 
+
+def iterate_stack(expression_stack: list)->str:
+    expression_inverted = ""
+    while len(expression_stack) > 0:
+        expression_inverted += expression_stack.pop()
+    return expression_inverted
     
 # Define the function for inverted a expression
 # def inverted_expression(expression: str) -> str:
