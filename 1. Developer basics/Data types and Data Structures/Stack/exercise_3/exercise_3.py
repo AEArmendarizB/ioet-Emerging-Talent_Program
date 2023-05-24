@@ -12,21 +12,8 @@ def iterate_stack(expression_stack: list)->str:
         expression_inverted += expression_stack.pop()
     return expression_inverted
     
-# Define the function for inverted a expression
-# def inverted_expression(expression: str) -> str:
-#     inverted: str = []
-#     new_expression: str = ""
-#     for character in expression:
-#         inverted.append(character)
+if __name__ == "__main__":
+    expression: str = input("Ingrese una cadena de texto: ")
+    expression_stack = reverted_expression(expression)
+    print (iterate_stack(expression_stack))
 
-#     # Iterate throught the stack
-#     while len(inverted) > 0:
-#         new_expression = new_expression + inverted.pop()
-
-#     return new_expression
-
-
-# # Request the expression
-# expression: str = input("Ingrese una cadena de texto: ")
-# print("La cadena invertida es: ")
-# print(f"{inverted_expression(expression)}")
