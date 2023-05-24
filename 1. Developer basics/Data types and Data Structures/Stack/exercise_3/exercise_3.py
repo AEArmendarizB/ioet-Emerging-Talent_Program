@@ -1,7 +1,11 @@
-# EJERCICIO DE INVERSION DE CADENA
-# Escribe una función que tome una cadena y la invierta utilizando una pila para almacenar los caracteres en orden inverso.
-# Para ello, recorre cada caracter de la cadena y lo apila en la pila, y luego desapila cada caracter para construir la cadena invertida.
 
+def reverted_expression(expression: str)->list:
+    expression_inverted:str = []
+    for character in expression:
+        expression_inverted.append(character)
+    return expression_inverted
+
+    
 # Define the function for inverted a expression
 # def inverted_expression(expression: str) -> str:
 #     inverted: str = []
