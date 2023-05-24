@@ -9,21 +9,25 @@ import random
 import time
 from queue import Queue
 
-def add_new_client(supermarket, client):
+def add_new_client(supermarket:list, client:int)->list:
     time.sleep(random.randint(0, 5))
     supermarket.put(client)  
     #print ("El cliente" f"{client}" "se añadio a la cola")
     return supermarket
 
+def attend_client(supermarket:list)->list:
+    if supermarket.qsize() > 0:
+        time.sleep(random.randint(0, 5))
+        client:int = supermarket.get()
+        #print ("El cliente " f"{client}" "fue atendido")
+        return supermarket
+    if supermarket.qsize() == 0:
+        #print("No hay clientes en la cola")
+        return supermarket
+
 # supermarket: int = Queue()              #Declarate a queue and principals variables
 # num_iterations: int = 25               #max size of iterations
 
-
-# #Funtion to add a new client to queue
-# def new_client(client: int):
-#     time.sleep(random.randint(0, 5))
-#     supermarket.put(client)
-#     print("El cliente " f"{client}" " se añadio a la cola")
 
 # #Funtion to atend a client and delete from queue
 # def atend_client():
