@@ -9,7 +9,11 @@ import random
 import time
 from queue import Queue
 
-
+def add_new_client(supermarket, client):
+    time.sleep(random.randint(0, 5))
+    supermarket.put(client)  
+    #print ("El cliente" f"{client}" "se añadio a la cola")
+    return supermarket
 
 # supermarket: int = Queue()              #Declarate a queue and principals variables
 # num_iterations: int = 25               #max size of iterations
