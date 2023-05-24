@@ -12,36 +12,25 @@ from queue import Queue
 def add_new_client(supermarket:list, client:int)->list:
     time.sleep(random.randint(0, 5))
     supermarket.put(client)  
-    #print ("El cliente" f"{client}" "se añadio a la cola")
+    print ("El cliente  "  f"{client}" "  se añadio a la cola")
     return supermarket
 
 def attend_client(supermarket:list)->list:
     if supermarket.qsize() > 0:
         time.sleep(random.randint(0, 5))
         client:int = supermarket.get()
-        #print ("El cliente " f"{client}" "fue atendido")
+        print ("El cliente  " f"{client}" "  fue atendido")
         return supermarket
     if supermarket.qsize() == 0:
-        #print("No hay clientes en la cola")
+        print("No hay clientes en la cola")
         return supermarket
 
-# supermarket: int = Queue()              #Declarate a queue and principals variables
-# num_iterations: int = 25               #max size of iterations
-
-
-# #Funtion to atend a client and delete from queue
-# def atend_client():
-#     if supermarket.qsize()>0: 
-#         time.sleep(random.randint(0, 5))
-#         atend: int  = supermarket.get()
-#         print("El cliente  " f"{atend}" " fue atendido")
-#         if supermarket.qsize()==0:
-#             print("No hay clientes en la cola")
-
-# for i in range(num_iterations):
-#     opcion: int = random.randint(1,2)       #determinate a new client or atend the client. If opcion = 1 is a new client else atend the client
-#     if opcion == 1:
-#         client: int = random.randint(1,20)      #represent each client
-#         new_client(client)
-#     else:
-#         atend_client()
+if __name__ == "__main__":
+    supermarket:int = Queue()
+    num_iterations = 25
+for i in range(num_iterations):
+    opcion:int = random.randint(1, 2)
+    if opcion == 1:
+        supermarket = add_new_client(supermarket, random.randint(1, 100))
+    else:
+        supermarket = attend_client(supermarket)
