@@ -20,7 +20,9 @@ def test__add_new_client__return_queue__when_input_are_queue_and_int():
 def test__attend_client__return_queue__when_input_is_queue():
     supermarket = QueueWithContentComparison()
     supermarket.put(2)
+    supermarket.put(5)
     supermarket_client_expected = QueueWithContentComparison()
+    supermarket_client_expected.put(5)
     supermarket_client = exercise_1.attend_client(supermarket)
     assert supermarket_client_expected == supermarket_client
 
